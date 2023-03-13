@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1252a0;
+    background-color: #ffffff;
+}
+
+.header {
+    width: 1150px;
+    margin: 0 auto;
+    padding: 0 50px; 
+}
+
+.main-content {
+    width: 1150px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+h2 {
+    text-align: center;
+}
+
+/*Карточки*/
+
+.supervisor-section {
+    margin-bottom: 100px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 50px;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 30px #d1deef;
+}
+
+.card-img {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-supervisor {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-status {
+    margin: 0;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.card-text {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/*Footer*/
+
+.footer {
+    width: 1150px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
