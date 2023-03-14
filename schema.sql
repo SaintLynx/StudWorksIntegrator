@@ -6,11 +6,11 @@ CREATE DATABASE studentsworks
 USE studentsworks;
 
 CREATE TABLE studentsworkstable (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  student_name VARCHAR(128),
-  year_of_study INT,
-  group VARCHAR(64),
-  supervisor VARCHAR(128),
-  work_name TEXT NOT NULL,
-  date_creation DATETIME DEFAULT CURRENT_TIMESTAMP,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_name VARCHAR(128) NOT NULL,
+    year_of_study INT,
+    group_name VARCHAR(64),
+    supervisor VARCHAR(128),
+    work_name TEXT NOT NULL,
+    date_creation DATETIME DEFAULT CURRENT_TIMESTAMP
 );
