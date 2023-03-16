@@ -11,6 +11,50 @@ body {
     width: 1150px;
     margin: 0 auto;
     padding: 0 50px; 
+    margin-bottom: 100px;
+}
+
+.header-title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.header p {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.site-navigation-item {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.site-navigation-item a {
+    font-size: 14px;
+    line-height: 18px;
+    color: #1252a0;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #f1f3f6;
+    box-shadow: 0 4px 30px #d1deef;
+}
+
+.site-navigation-item a:hover {
+    color: rgba(22, 49, 82, 0.5);
+}
+
+.site-navigation-item a:active {
+    color: rgba(22, 49, 82, 0.3);
 }
 
 .main-content {
@@ -21,6 +65,7 @@ body {
 
 h2 {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 /*Карточки*/
@@ -43,6 +88,19 @@ h2 {
     width: 300px;
     padding: 20px;
     box-shadow: 0 4px 30px #d1deef;
+}
+
+.card a {
+    text-decoration: none;
+    color: #1252a0;
+}
+
+.card a:hover {
+    color: rgba(22, 49, 82, 0.5);
+}
+
+.card a:active {
+    color: rgba(22, 49, 82, 0.5);
 }
 
 .card-img {
@@ -74,7 +132,21 @@ h2 {
 
 .footer {
     width: 1150px;
-    margin: 0 auto;
+    margin: 100px auto;
     padding: 0 50px;
+    border-top: 1px solid #00c6bd;
+}
+
+.dev {
+    text-align: end;
+}
+
+.copyright {
+    text-align: end;
+}
+
+.active {
+    border-left: 3px solid #00c6bd;
+    padding-left: 5px;
 }
 
