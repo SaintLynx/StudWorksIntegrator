@@ -126,23 +126,24 @@
       </section>
       <section class="form">
         <h2 class="form-title">Форма отправки темы научной работы</h2>
-        <form class="index-form" name="signup" method="POST" action="form.php" enctype="multipart/form-data">
-            <label>ФИО<input type="text" name="student_name"></label>
-            <label>Курс<select name="year_of_study" required>
+        <form class="index-form" name="signup" method="POST" action="functions.php" enctype="multipart/form-data">
+          <div class="form-item-one">
+            <label>ФИО обучающегося <input type="text" name="student_name"></label>
+            <label>Курс <select name="year_of_study" required>
               <option value="1">1</option>
             </select></label>
-            <label>Группа <input type="text" name="group"></label>
-            <label>Научный руководитель<select name="supervisor" required>
+            <label>Научный руководитель <select name="supervisor" required>
               <option value="1">1</option>
             </select></label>
-            <label>Название темы <textarea name="work_name"></textarea></label>
-            <input type="submit" name="send" value="Отправить">
+          </div>
+          <div class="form-item-two"><label>Название темы <textarea name="work_name"></textarea></label></div>
+          <div class="form-item-three"><input class="button" type="submit" name="send" value="Отправить"></div>
         </form>
       </section>
     </main>
     <footer class="footer">
       <p class="dev">Закиров А., Булатов И., Салихов А., Кузнецова А. Команда №6, РИТП 4.1</p>
-      <p class="copyright">ИСР ©2023 Все права защищены</p>
+      <p class="copyright">Интегратор Студенческих Работ ©2023 Все права защищены</p>
     </footer>
     <script src="/script.js"></script>
   </body>

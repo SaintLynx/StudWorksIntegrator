@@ -128,6 +128,73 @@ h2 {
     font-weight: bold;
 }
 
+/*форма отправки*/
+
+.index-form {
+    width: 1150px;
+}
+
+.form-item-one,
+.form-item-two,
+.form-item-three {
+    margin-bottom: 50px;
+    gap: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-item-one {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-item-one input{
+    width: 350px;
+    padding: 5px 10px;
+    border: 1px solid #2590c6;
+}
+
+.form-item-one select {
+    padding: 5px 10px;
+    border: 1px solid #2590c6;
+} 
+
+.form-item-two textarea{
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #2590c6;
+    box-sizing: border-box;
+}
+
+.button {
+    display: block;
+    padding: 9px 32px;
+    background-color: #45abde;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #61c3f4;
+}
+
+.button:active {
+  background-color: #2590c6;
+}
+
+.button:disabled {
+  background-color: #45abde;
+  opacity: 0.3;
+}
+
+
 /*Footer*/
 
 .footer {
