@@ -182,25 +182,55 @@ h2 {
 
 .button:hover,
 .button:focus {
-  background-color: #61c3f4;
+    background-color: #61c3f4;
 }
 
 .button:active {
-  background-color: #2590c6;
+    background-color: #2590c6;
 }
 
 .button:disabled {
-  background-color: #45abde;
-  opacity: 0.3;
+    background-color: #45abde;
+    opacity: 0.3;
 }
 
+/*Страница для преподавателей*/
+
+.form-item-one label {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-section {
+    border-bottom: 1px solid #00c6bd;
+    padding-bottom: 25px;
+}
+
+.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+.main-table th, td {
+    border: 1px solid #00c6bd;
+}
+
+.table-body td {
+    padding-left: 5px;
+}
+
+.modify {
+    text-align: center;
+}
 
 /*Footer*/
 
 .footer {
     width: 1150px;
     margin: 100px auto;
-    padding: 0 50px;
+    padding: 0;
     border-top: 1px solid #00c6bd;
 }
 
