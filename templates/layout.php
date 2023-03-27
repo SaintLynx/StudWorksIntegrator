@@ -16,7 +16,7 @@
         <nav class="main-nav">
         <ul class="site-navigation">
             <li class="site-navigation-item"><a href="/index.php">Для студентов</a></li>
-            <li class="site-navigation-item"><a href="main.html">Для преподавателей</a></li>
+            <li class="site-navigation-item"><a href="/tables.php">Для преподавателей</a></li>
         </ul>
         </nav>
     </header>

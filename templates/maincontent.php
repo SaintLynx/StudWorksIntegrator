@@ -113,10 +113,9 @@
                 <?php endforeach; ?>
                 </select>
             </label>
-        
         <label>Научный руководитель <select name="supervisor_name" required>
         <?php foreach ($supervisors as $supervisor): ?>
-            <option value="1"><?= $supervisor["supervisor_name"]; ?></option>
+            <option value="Выбирите научного руководителя"><?= $supervisor["supervisor_name"]; ?></option>
             <?php endforeach; ?>
         </select></label>
         </div>
