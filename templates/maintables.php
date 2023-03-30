@@ -1,13 +1,13 @@
-<section class="form-section">
+<section class="form-select">
     <h2 class="form-title">Темы научных работ</h2>
-    <form class="main-form" name="signup" method="GET" action="form.php" enctype="multipart/form-data"></form>
-        <div class="form-item-one">
-        <label>Научный руководитель <select name="supervisor_name" required>
-        <?php foreach ($supervisors as $supervisor): ?>
-            <option value="Выбирите научного руководителя"><?= $supervisor["supervisor_name"]; ?></option>
-            <?php endforeach; ?>
-        </select></label>
-        </div>
+    <form name="signup" method="GET" action="form.php" enctype="multipart/form-data"></form>
+        <label class="supervisor-lable-select">Научный руководитель 
+            <select class="supervisor-select-select" name="supervisor_name" required>
+                <?php foreach ($supervisors as $supervisor): ?>
+                    <option value="Выбирите научного руководителя"><?= $supervisor["supervisor_name"]; ?></option>
+                <?php endforeach; ?>
+            </select>
+        </label>
         <input class="button" type="submit" name="send" value="Отправить">
     </form>
 </section>

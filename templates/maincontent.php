@@ -101,25 +101,32 @@
         </div>
         </li>
     </ul>
-    </section>
-    <section class="form">
+</section>
+<section class="form">
     <h2 class="form-title">Форма отправки темы научной работы</h2>
-    <form class="index-form" name="datapost" method="POST" action="main-content.php" enctype="multipart/form-data">
-        <div class="form-item-one">
-        <label>ФИО обучающегося <input type="text" name="student_name"></label>
-            <label>Курс <select name="year_of_study" required>
-                <?php foreach ($years_of_study as $year_of_study): ?>
-                    <option value="1"><?= $year_of_study["year_of_study"]; ?></option>
-                <?php endforeach; ?>
-                </select>
-            </label>
-        <label>Научный руководитель <select name="supervisor_name" required>
-        <?php foreach ($supervisors as $supervisor): ?>
-            <option value="Выбирите научного руководителя"><?= $supervisor["supervisor_name"]; ?></option>
+
+    <form class="main-form" method="POST" action="/index.php" enctype="multipart/form-data">
+        <label class="name-lable">ФИО обучающегося(-йся) 
+            <input class="name-input" type="text" name="student_name" placeholder="Введите Фамилю Имя Отчество" required>
+        </label>
+        <label class="year-lable">Курс 
+            <select class="year-select" name="year_of_study" required>
+            <?php foreach ($years_of_study as $year_of_study): ?>
+                <option><?= $year_of_study["year_of_study"]; ?></option>
             <?php endforeach; ?>
-        </select></label>
-        </div>
-        <div class="form-item-two"><label>Название темы <textarea name="work_name"></textarea></label></div>
-        <div class="form-item-three"><input class="button" type="submit" name="send" value="Отправить"></div>
+            </select>
+        </label>
+        <label class="supervisor-lable">Научный руководитель 
+            <select class="supervisor-select" name="supervisor_name" required>
+                <?php foreach ($supervisors as $supervisor): ?>
+                    <option><?= $supervisor["supervisor_name"]; ?></option>
+                <?php endforeach; ?>
+            </select>
+        </label>
+        <textarea class="textarea" name="work_name" placeholder="Начните вводить здесь тему научного исследования..." required></textarea>
+        <input class="button" type="submit" name="send" value="Отправить">
     </form>
+    <div>
+    <?= var_dump($_POST) ?>
+    </div>
 </section>
