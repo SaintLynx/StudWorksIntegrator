@@ -130,41 +130,70 @@ h2 {
 
 /*форма отправки*/
 
-.index-form {
-    width: 1150px;
+.form {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.form-item-one,
-.form-item-two,
-.form-item-three {
-    margin-bottom: 50px;
-    gap: 50px;
-    text-align: center;
+.main-form {
+    padding: 15px;
+    display: block;
+}
+
+.name-lable {
     font-weight: bold;
 }
 
-.form-item-one {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-item-one input{
-    width: 350px;
-    padding: 5px 10px;
-    border: 1px solid #2590c6;
-}
-
-.form-item-one select {
-    padding: 5px 10px;
-    border: 1px solid #2590c6;
-} 
-
-.form-item-two textarea{
-    display: block;
+.name-input {
     width: 100%;
-    padding: 5px 10px;
-    border: 1px solid #2590c6;
+    margin-bottom: 25px;
+    padding: 10px 15px;
     box-sizing: border-box;
+    border: 2px solid #00c6bd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.year-lable {
+    font-weight: bold;
+}
+
+.year-select {
+    border-radius: 5px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border: 2px solid #00c6bd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.supervisor-lable {
+    font-weight: bold;
+}
+
+.supervisor-select {
+    width: 350px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border: 2px solid #00c6bd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.textarea {
+    width: 100%;
+    resize: vertical;
+    box-sizing: border-box;
+    height: 100px;
+    margin-bottom: 25px;
+    padding: 10px 15px;
+    font-size: large;
+    border: 2px solid #00c6bd;
+    border-radius: 4px;
+    outline: none;
 }
 
 .button {
@@ -172,7 +201,6 @@ h2 {
     padding: 9px 32px;
     background-color: #45abde;
     color: #ffffff;
-    text-align: center;
     font-weight: 700;
     border: none;
     border-radius: 5px;
@@ -196,21 +224,31 @@ h2 {
 
 /*Страница для преподавателей*/
 
-.form-item-one label {
-    display: block;
+.form-select {
+    width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.form-section {
-    border-bottom: 1px solid #00c6bd;
-    padding-bottom: 25px;
+.supervisor-lable-select {
+    font-weight: bold;
+}
+
+.supervisor-select-select {
+    width: 350px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border: 2px solid #00c6bd;
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 50px;
+    margin-left: 15px;
 }
 
 .main-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 .main-table th, td {
