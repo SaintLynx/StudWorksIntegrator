@@ -2,10 +2,7 @@
 <html lang="ru">
 <head><title>Успех!</title></head>
 <body>
-<?php if (isset($_GET['success'])): ?>
-<div class="alert alert-success">
-<p>Спасибо за ваше сообщение!</p>
-</div>
-<?php endif; ?>
+<p>Ваше сообщение отправлено!</p>
+<a href="/index.php">Вернуться на главную страницу</a>
 </body>
 </html>
