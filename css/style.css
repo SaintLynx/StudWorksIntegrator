@@ -284,3 +284,18 @@ h2 {
     border-left: 3px solid #00c6bd;
     padding-left: 5px;
 }
+
+/*success page*/
+
+.success-section {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.success-title {
+    text-align: center;
+}

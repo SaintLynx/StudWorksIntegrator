@@ -111,13 +111,15 @@
         </label>
         <label class="year-lable">Курс 
             <select class="year-select" name="year_of_study" required>
-            <?php foreach ($years_of_study as $year_of_study): ?>
-                <option><?= $year_of_study["year_of_study"]; ?></option>
-            <?php endforeach; ?>
+                    <option selected></option>
+                <?php foreach ($years_of_study as $year_of_study): ?>
+                    <option><?= $year_of_study["year_of_study"]; ?></option>
+                <?php endforeach; ?>
             </select>
         </label>
         <label class="supervisor-lable">Научный руководитель 
             <select class="supervisor-select" name="supervisor_name" required>
+                    <option selected></option>
                 <?php foreach ($supervisors as $supervisor): ?>
                     <option><?= $supervisor["supervisor_name"]; ?></option>
                 <?php endforeach; ?>

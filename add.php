@@ -17,4 +17,4 @@ if (!$con) {
     };
 };
 
-header('Location: templates/success.php');
+header('Location: /success.php');
