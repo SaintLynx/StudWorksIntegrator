@@ -224,6 +224,11 @@ h2 {
 
 /*Страница для преподавателей*/
 
+.table-section {
+    width: 1150px;
+    margin: 0;
+}
+
 .form-select {
     width: 600px;
     margin-left: auto;

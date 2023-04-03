@@ -104,7 +104,7 @@
 </section>
 <section class="form">
     <h2 class="form-title">Форма отправки темы научной работы</h2>
-
+    
     <form class="main-form" method="POST" action="/add.php" enctype="multipart/form-data">
         <label class="name-lable">ФИО обучающегося(-йся) 
             <input class="name-input" type="text" name="student_name" placeholder="Введите Фамилю Имя Отчество" required>
