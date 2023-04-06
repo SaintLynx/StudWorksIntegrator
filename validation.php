@@ -1,11 +1,5 @@
 <?php
 
-// if (count($_POST) > 0) {
-//     if (strlen($_POST['student_name']) === 0) {
-//         echo "Укажите Фамилию Имя Отчество<br>";
-//     };
-// }; 
-
 // // Проверка заполненности 
 // // @param string $student_name поле для указания ФИО
 // function validate_name($student_name) {
