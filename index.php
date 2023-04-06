@@ -1,6 +1,6 @@
 <?php
-require ("functions.php");
-require ("init.php");
+require_once ("functions.php");
+require_once ("init.php");
 
 if (!$con) {
         $error = mysqli_connect_error();

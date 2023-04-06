@@ -26,3 +26,6 @@ INSERT INTO studentsworkstable SET student_name='$student_name', year_of_study='
 
 -- Формируем запрос в БД с указанием выбранного научного руководителя с сортировкой по курсу обучения
 SELECT student_name, year_of_study, supervisor_name, work_name FROM studentsworkstable WHERE supervisor_name='$supervisor_select' ORDER BY year_of_study;
+
+-- Формируем запрос на получение все списка наименований студенческих работ
+SELECT student_name, year_of_study, supervisor_name, work_name FROM studentsworkstable ORDER BY year_of_study;

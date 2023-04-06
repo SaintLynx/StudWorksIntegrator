@@ -21,3 +21,10 @@ function include_template($name, array $data = []) {
 
     return $result;
 };
+
+/**
+ * Возвращает введенные в поле данные, если валидация не пройдена
+ */
+function get_post_val($post_value) {
+    return $_POST[$post_value] ?? "";
+};

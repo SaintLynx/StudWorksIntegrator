@@ -106,8 +106,8 @@
     <h2 class="form-title">Форма отправки темы научной работы</h2>
     
     <form class="main-form" method="POST" action="/add.php" enctype="multipart/form-data">
-        <label class="name-lable">ФИО обучающегося(-йся) 
-            <input class="name-input" type="text" name="student_name" placeholder="Введите Фамилю Имя Отчество" required>
+        <label for="student_name" class="name-lable">ФИО обучающегося(-йся)
+            <input class="name-input" type="text" id="student_name" name="student_name" placeholder="Введите Фамилю Имя Отчество" >
         </label>
         <label class="year-lable">Курс 
             <select class="year-select" name="year_of_study" required>
@@ -125,7 +125,7 @@
                 <?php endforeach; ?>
             </select>
         </label>
-        <textarea class="textarea" name="work_name" placeholder="Начните вводить здесь тему научного исследования..." required></textarea>
+        <textarea class="textarea" name="work_name" placeholder="Начните вводить здесь тему научного исследования..." ></textarea>
         <input class="button" type="submit" value="Отправить">
     </form>
 </section>
