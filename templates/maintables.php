@@ -24,13 +24,13 @@
             </tr>
         </thead>
         <tbody class="table-body">
-            <?php foreach ($getrows as $getrow): ?>
+            <?php $counter = 1; foreach ($getrows as $getrow): ?>
                 <tr>
-                    <td class="modify">1</td>
-                    <td><?= $getrow["student_name"]; ?></td>
-                    <td class="modify"><?= $getrow["year_of_study"]; ?></td>
-                    <td><?= $getrow["supervisor_name"]; ?></td>
-                    <td><?= $getrow["work_name"]; ?></td>
+                    <td class="modify"><?= $counter++; ?></td>
+                    <td><?= htmlspecialchars($getrow["student_name"]); ?></td>
+                    <td class="modify"><?= htmlspecialchars($getrow["year_of_study"]); ?></td>
+                    <td><?= htmlspecialchars($getrow["supervisor_name"]); ?></td>
+                    <td><?= htmlspecialchars($getrow["work_name"]); ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

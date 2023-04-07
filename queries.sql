@@ -1,4 +1,4 @@
--- Добавляем в таблицу научных руководителей ФИО преподавателей
+-- Добавляем в таблицу научных руководителей ФИО преподавателей (обязательно для развертывания)
 INSERT INTO supervisors (supervisor_name, supervisor_code)
 VALUES
     ('Зазнаев Олег Иванович', '1'),
@@ -13,7 +13,7 @@ VALUES
     ('Фазулов Азат Ревгатович', '10'),
     ('Мурзина Диляра Шамилевна', '11');
 
--- Добавляем в таблицу курсов указание года обучения
+-- Добавляем в таблицу курсов указание года обучения (обязательно для развертывания)
 INSERT INTO years_of_study (year_of_study)
 VALUES
     ('1'),
@@ -26,3 +26,6 @@ INSERT INTO studentsworkstable SET student_name='$student_name', year_of_study='
 
 -- Формируем запрос в БД с указанием выбранного научного руководителя с сортировкой по курсу обучения
 SELECT student_name, year_of_study, supervisor_name, work_name FROM studentsworkstable WHERE supervisor_name='$supervisor_select' ORDER BY year_of_study;
+
+-- Формируем запрос на получение все списка наименований студенческих работ
+SELECT student_name, year_of_study, supervisor_name, work_name FROM studentsworkstable ORDER BY year_of_study;
