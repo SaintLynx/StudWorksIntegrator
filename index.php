@@ -35,22 +35,22 @@ if (count($_POST) > 0) {
     $error_counter = 0;
 
     if (strlen($_POST['student_name']) === 0) {
-        $false_name = "Поле с ФИО не может быть пустым<br>";
+        $false_name = "Поле с ФИО не может быть пустым!";
         $error_counter++;
     }
 
     if (strlen($_POST['year_of_study']) === 0) {
-        $false_year = "Выберите курс<br>";
+        $false_year = "Выберите курс!";
         $error_counter++;
     }
 
     if (strlen($_POST['supervisor_name']) === 0) {
-        $false_sup = "Выберите научного руководителя<br>";
+        $false_sup = "Выберите научного руководителя!";
         $error_counter++;
     }
 
     if (strlen($_POST['work_name']) < 5) {
-        $false_work = "Название работы не может быть короче 5 знаков<br>";
+        $false_work = "Название работы не может быть короче 5 знаков!";
         $error_counter++;
     }
 

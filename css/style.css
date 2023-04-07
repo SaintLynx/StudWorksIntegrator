@@ -130,6 +130,13 @@ h2 {
 
 /*форма отправки*/
 
+.alert {
+    font-weight: bold;
+    color: #b11212;
+    padding-left: 17px;
+    margin: 0;
+}
+
 .form {
     width: 700px;
     margin-left: auto;
