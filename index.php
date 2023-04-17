@@ -1,6 +1,6 @@
 <?php
-require_once ("functions.php");
 require_once ("init.php");
+require_once ("functions.php");
 
 $false_name = '';
 $false_year = '';
@@ -22,7 +22,7 @@ if (!$con) {
 if (!$con) {
         $error = mysqli_connect_error();
     } else {
-        $sql = "SELECT supervisor_name FROM supervisors";
+        $sql = "SELECT supervisor_name FROM supervisors_list";
         $result = mysqli_query($con, $sql);
         if (!$result) {
         $error = mysqli_error($con);

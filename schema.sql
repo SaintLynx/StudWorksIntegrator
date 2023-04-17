@@ -14,7 +14,13 @@ CREATE TABLE studentsworkstable (
   date_creation DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE supervisors (
+CREATE TABLE supervisors_list (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  supervisor_name VARCHAR(128) ,
+  supervisor_code INT
+);
+
+CREATE TABLE supervisors_select (
   id INT AUTO_INCREMENT PRIMARY KEY,
   supervisor_name VARCHAR(128) ,
   supervisor_code INT
