@@ -282,20 +282,24 @@ h2 {
 }
 
 .col2 {
-    width: 300px;
+    width: 250px;
 }
 
 .col3 {
     text-align: center;
-    width: 70px;
+    width: 60px;
 }
 
 .col4 {
-    width: 300px;
+    width: 250px;
 }
 
 .col5 {
-    max-width: 450px;
+    max-width: 400px;
+}
+
+.col6 {
+    width: 160px;
 }
 
 /*Footer*/

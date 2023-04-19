@@ -21,6 +21,7 @@
                 <th>Курс</th>
                 <th>Научный руководитель</th>
                 <th>Название темы</th>
+                <th>Дата отправки</th>
             </tr>
         </thead>
         <tbody class="table-body">
@@ -31,6 +32,7 @@
                     <td class="col3"><?= htmlspecialchars($getrow["year_of_study"]); ?></td>
                     <td class="col4"><?= htmlspecialchars($getrow["supervisor_name"]); ?></td>
                     <td class="col5"><?= htmlspecialchars($getrow["work_name"]); ?></td>
+                    <td class="col6"><?= htmlspecialchars($getrow["date_creation"]); ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
