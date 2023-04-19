@@ -22,12 +22,12 @@ if (!$con) {
 if (!$con) {
         $error = mysqli_connect_error();
     } else {
-        $sql = "SELECT supervisor_name FROM supervisors_list";
+        $sql = "SELECT * FROM supervisor_cards";
         $result = mysqli_query($con, $sql);
         if (!$result) {
         $error = mysqli_error($con);
     } else {
-        $supervisors = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $supervisor_cards = mysqli_fetch_all($result, MYSQLI_ASSOC);
     };
 };
 
@@ -77,8 +77,8 @@ if (count($_POST) > 0) {
 };
 
 $main_content = include_template("maincontent.php", [
+    "supervisor_cards" => $supervisor_cards,
     "years_of_study" => $years_of_study,
-    "supervisors" => $supervisors,
     "false_name" => $false_name,
     "false_year" => $false_year,
     "false_sup" => $false_sup,
