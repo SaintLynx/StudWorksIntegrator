@@ -1,3 +1,4 @@
+-- Создаем базу данных, задаем ей параметры
 DROP DATABASE IF EXISTS studentsworks;
 CREATE DATABASE studentsworks
   DEFAULT CHARACTER SET utf8
@@ -5,6 +6,7 @@ CREATE DATABASE studentsworks
 
 USE studentsworks;
 
+-- Создаем таблицу, которая будет заполняться данными из формы для студентов
 CREATE TABLE studentsworkstable (
   id INT AUTO_INCREMENT PRIMARY KEY,
   student_name VARCHAR(128) NOT NULL,
@@ -14,13 +16,25 @@ CREATE TABLE studentsworkstable (
   date_creation DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE supervisors (
+-- Создаем таблицу для выпадающего списка научных руководителей на странице для преподавателей(есть строка с выбором "всех")
+CREATE TABLE supervisors_select (
   id INT AUTO_INCREMENT PRIMARY KEY,
   supervisor_name VARCHAR(128) ,
   supervisor_code INT
 );
 
+-- Создаем таблицу для выпадающего списка курсов
 CREATE TABLE years_of_study (
   id INT AUTO_INCREMENT PRIMARY KEY,
   year_of_study INT
+);
+
+-- Создаем таблицу с карточками научных руководителей
+CREATE TABLE supervisor_cards (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  supervisor_name VARCHAR(128),
+  supervisor_photo VARCHAR(128),
+  supervisor_status VARCHAR(128),
+  supervisor_interests VARCHAR(255),
+  supervisor_site VARCHAR(255)
 );
