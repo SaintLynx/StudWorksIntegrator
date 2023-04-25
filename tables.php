@@ -2,6 +2,8 @@
 require_once ("init.php");
 require_once ("functions.php");
 
+session_start();
+
 if (!$con) {
         $error = mysqli_connect_error();
     } else {

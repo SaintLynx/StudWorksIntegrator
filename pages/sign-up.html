@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        <title>Регистрация</title>
+    </head>
+    <body>
+        <main class="sign-up">
+            <form class="sign-up_form" action="/sign-up.php" method="POST" autocomplete="off" enctype="multipart/form-data">
+                <h2>Регистрация нового аккаунта</h2>
+                <div class="sign-up_item">
+                    <label for="surname">Фамилия: </label>
+                    <input id="surname" type="text" name="user_surname" placeholder="Введите фамилию">
+                </div>
+                <div class="sign-up_item">
+                    <label for="name">Имя: </label>
+                    <input id="name" type="text" name="user_name" placeholder="Введите имя">
+                </div>
+                <div class="sign-up_item">
+                    <label for="last_name">Отчество: </label>
+                    <input id="last_name" type="text" name="user_last_name" placeholder="Введите отчество">
+                </div>
+                <div class="sign-up_item">
+                    <label for="email">E-mail: </label>
+                    <input id="email" type="email" name="user_email" placeholder="Введите e-mail">
+                </div>
+                <div class="sign-up_item">
+                    <label for="password">Пароль: </label>
+                    <input id="password" type="password" name="user_password" placeholder="Введите пароль">
+                </div>
+                <div class="sign-up_item">
+                    <label for="password_copy">Повторите пароль: </label>
+                    <input id="password_copy" type="password" name="user_password" placeholder="Повторите пароль">
+                </div>
+                <button type="submit" class="button">Зарегистрироваться</button>
+                <a class="login-link" href="/login.php">Уже есть аккаунт</a>
+            </form>
+        </main>
+    </body>
+</html>

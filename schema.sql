@@ -38,3 +38,14 @@ CREATE TABLE supervisor_cards (
   supervisor_interests VARCHAR(255),
   supervisor_site VARCHAR(255)
 );
+
+-- Создаем БД пользователей
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_surname VARCHAR(128),
+  user_name VARCHAR(128),
+  user_last_name VARCHAR(128),
+  user_email VARCHAR(128) NOT NULL UNIQUE,
+  user_password CHAR(255),
+  date_creation DATETIME DEFAULT CURRENT_TIMESTAMP
+);

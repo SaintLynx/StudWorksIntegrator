@@ -4,9 +4,9 @@
     <p class="alert"><?= $false_year; ?></p>
     <p class="alert"><?= $false_sup; ?></p>
     <p class="alert"><?= $false_work; ?></p>
-    <form class="main-form" method="POST" action="/index.php" enctype="multipart/form-data">
+    <form class="main-form" method="POST" action="/index.php" enctype="multipart/form-data" autocomplete="off">
         <label for="student_name" class="name-lable">ФИО обучающегося(-йся) 
-            <input class="name-input" type="text" id="student_name" name="student_name" placeholder="Введите Фамилю Имя Отчество" value="<?= $_POST["student_name"] ?? ''; ?>">
+            <input class="name-input" type="text" id="student_name" name="student_name" placeholder="Введите Фамилию Имя Отчество" value="<?= $_POST["student_name"] ?? ''; ?>">
         </label>
         <label class="year-lable">Курс 
             <select class="year-select" name="year_of_study">

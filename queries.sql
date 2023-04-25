@@ -48,3 +48,9 @@ SELECT student_name, year_of_study, supervisor_name, work_name FROM studentswork
 
 -- Формируем запрос на получение данных научных руководителей из БД
 SELECT * FROM supervisor_cards;
+
+-- Добавляем в таблицу пользователей данные при регистрации
+INSERT INTO users SET user_surname='$user_surname', user_name='$user_name', user_last_name='$user_last_name', user_email='$user_email', user_password='$user_password';
+
+-- Формируем запрос на получение данных пользователя
+SELECT id, user_surname, user_name, user_last_name, user_email, user_password FROM users WHERE user_email='$user_email';

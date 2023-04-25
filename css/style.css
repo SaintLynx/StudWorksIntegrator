@@ -13,9 +13,29 @@ body {
 
 .header {
     width: 1150px;
-    margin: 0 auto;
-    padding: 0 50px; 
-    margin-bottom: 100px;
+    margin: 50px auto 100px auto;
+    padding: 0; 
+    display: flex;
+}
+
+.header-container {
+    width: 1000px;
+}
+
+.user-container {
+    width: 150px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.user-name {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.logout {
+    text-decoration: none;
+    color: #1252a0;
 }
 
 .header-title {
@@ -24,11 +44,10 @@ body {
     margin-bottom: 50px;
 }
 
-.header p {
+.header-info {
     text-align: center;
     margin-bottom: 50px;
 }
-
 
 .site-navigation {
     display: flex;
@@ -138,6 +157,12 @@ h2 {
     font-weight: bold;
     color: #b11212;
     padding-left: 17px;
+    margin: 0;
+}
+
+.alert-sign-up {
+    font-weight: bold;
+    color: #b11212;
     margin: 0;
 }
 
@@ -375,4 +400,55 @@ h2 {
 
 .success-title {
     text-align: center;
+}
+
+/*Регистрация*/
+
+.login-link {
+    text-decoration: none;
+    color: #1252a0;
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login-link:hover {
+    color: rgba(22, 49, 82, 0.5);
+}
+
+.login-link:active {
+    color: rgba(22, 49, 82, 0.5);
+}
+
+.sign-up {
+    margin: 300px 0;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign-up_item {
+    margin: 0;
+}
+
+.sign-up_item label {
+    display: block;
+    padding: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.sign-up_item input {
+    display: block;
+    padding: 0;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 18px;
+    line-height: 23px;
+    padding: 5px 10px;
+    border: 2px solid #00c6bd;
+    border-radius: 4px;
 }
