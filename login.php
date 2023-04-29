@@ -30,10 +30,10 @@ if (count($_POST) > 0) {
                 $result = mysqli_query($con, $sql);
                 if (!$result) {
                 $error = mysqli_error($con);
-            } else {
+                } else {
                 $user_data = mysqli_fetch_assoc($result);
+                };
             };
-        };
 
         if ($user_data) {
             if (password_verify($password, $user_data["user_password"])) {

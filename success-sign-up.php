@@ -9,7 +9,7 @@
     <title>Успех!</title></head>
 <body>
     <section class="success-section">
-    <h1 class="success-title">Регистрация прошла успешно</h1>
+    <h1 class="success-title">Регистрация прошла успешно!</h1>
     <form action="/login.php">
         <button type="submit" class="button">Назад</button>
     </form>

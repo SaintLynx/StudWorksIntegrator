@@ -6,13 +6,25 @@ session_start();
 $incorrect_surname = '';
 $incorrect_name = '';
 $incorrect_last_name = '';
-$empty_email = '';
 $incorrect_email = '';
+$same_email = '';
 $incorrect_password = '';
 $incorrect_password_copy = '';
 
 if (count($_POST) > 0) {
     $error_counter = 0;
+
+    if (!$con) {
+        $error = mysqli_connect_error();
+    } else {
+        $sql = "SELECT user_email FROM users;";
+        $result = mysqli_query($con, $sql);
+        if (!$result) {
+        $error = mysqli_error($con);
+        } else {
+        $emails = mysqli_fetch_assoc($result);
+        };
+    };
 
     if (strlen($_POST['user_surname']) === 0) {
         $incorrect_surname = "Поле с фамилией не может быть пустым!";
@@ -29,14 +41,14 @@ if (count($_POST) > 0) {
         $error_counter++;
     }
 
-    if (strlen($_POST['user_email']) === 0) {
-        $empty_email = "Поле с email не может быть пустым!";
-        $error_counter++;
-    }
-
     if (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
         $incorrect_email = "Не правильный формат почты";
         $error_counter++;
+    }
+
+    if(in_array($_POST['user_email'], $emails)) {
+        $same_email = "Пользователь с таким email уже зарегистрирован";
+        $error_counter++; 
     }
 
     if (strlen($_POST['user_password']) < 5) {
@@ -104,8 +116,8 @@ if (count($_POST) > 0) {
                     <input id="last_name" type="text" name="user_last_name" placeholder="Введите отчество" value="<?= $_POST["user_last_name"] ?? ''; ?>">
                 </div>
                 <div class="sign-up_item">
-                    <p class="alert-sign-up"><?= $empty_email; ?></p>
                     <p class="alert-sign-up"><?= $incorrect_email; ?></p>
+                    <p class="alert-sign-up"><?= $same_email; ?></p>
                     <label for="email">E-mail: </label>
                     <input id="email" type="text" name="user_email" placeholder="Введите e-mail" value="<?= $_POST["user_email"] ?? ''; ?>">
                 </div>

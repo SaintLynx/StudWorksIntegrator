@@ -13,6 +13,7 @@ CREATE TABLE studentsworkstable (
   year_of_study INT,
   supervisor_name VARCHAR(128),
   work_name TEXT NOT NULL,
+  user_id INT UNIQUE,
   date_creation DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 

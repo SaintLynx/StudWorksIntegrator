@@ -6,7 +6,7 @@
     <p class="alert"><?= $false_work; ?></p>
     <form class="main-form" method="POST" action="/index.php" enctype="multipart/form-data" autocomplete="off">
         <label for="student_name" class="name-lable">ФИО обучающегося(-йся) 
-            <input class="name-input" type="text" id="student_name" name="student_name" placeholder="Введите Фамилию Имя Отчество" value="<?= $_POST["student_name"] ?? ''; ?>">
+            <input class="name-input" type="text" id="student_name" name="student_name" placeholder="Введите Фамилию Имя Отчество" value="<?= $_SESSION['user_surname'] . ' ' . $_SESSION['user_name'] . ' ' .  $_SESSION['user_last_name']; ?>">
         </label>
         <label class="year-lable">Курс 
             <select class="year-select" name="year_of_study">
@@ -24,7 +24,7 @@
                 <?php endforeach; ?>
             </select>
         </label>
-        <label class="name-lable">Название работы
+        <label class="name-lable">Название работы (комментарии можно оставить здесь)
         <textarea class="textarea" name="work_name" placeholder="Начните вводить здесь тему научного исследования..."></textarea>
         </label>
         <input class="button" type="submit" value="Отправить">

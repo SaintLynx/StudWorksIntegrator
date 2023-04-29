@@ -16,15 +16,14 @@
                 <p class="header-info">Проект в рамках "Разработка IT-продукта" на "Цифровых кафедрах" ИТИС КФУ</p>
                 <nav class="main-nav">
                 <ul class="site-navigation">
-                    <li class="site-navigation-item"><a href="/index.php">Для студентов</a></li>
-                    <li class="site-navigation-item"><a href="/tables.php">Для преподавателей</a></li>
+                    <li class="site-navigation-item"><a href="/index.php">Форма</a></li>
+                    <li class="site-navigation-item"><a href="/tables.php">Таблица</a></li>
                 </ul>
                 </nav>
             </div>
             <div class="user-container">
                 <p class="user-name"><?= $_SESSION['user_surname']; ?></p>
                 <p class="user-name"><?= $_SESSION['user_name']; ?></p>
-                <p class="user-name"><?= $_SESSION['user_last_name']; ?></p>
                 <a class="logout" href="logout.php">Выйти</a>
             </div>
         </header>
