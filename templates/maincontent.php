@@ -25,8 +25,10 @@
             </select>
         </label>
         <label class="name-lable">Название работы (комментарии можно оставить здесь)
-        <textarea class="textarea" name="work_name" placeholder="Начните вводить здесь тему научного исследования..."></textarea>
+            <textarea class="textarea" name="work_name" placeholder="Начните вводить здесь тему научного исследования..."></textarea>
         </label>
+        <label class="name-lable">Текст работы (если имеется) 
+            <input class="name-input" type="file" name="work_file"></label>
         <input class="button" type="submit" value="Отправить">
     </form>
 </section>

@@ -14,6 +14,7 @@ CREATE TABLE studentsworkstable (
   supervisor_name VARCHAR(128),
   work_name TEXT NOT NULL,
   user_id INT UNIQUE,
+  work_file VARCHAR(128),
   date_creation DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 

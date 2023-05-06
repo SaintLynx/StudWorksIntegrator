@@ -64,12 +64,19 @@ if (isset($_SESSION['user_surname'])) {
             $work_name = mysqli_real_escape_string($con, $_POST['work_name']);
             $user_id = $_SESSION['id'];
 
+            if (isset($_FILES['work_file'])) {
+                $file_name = $_FILES['work_file']['name'];
+                $file_path = __DIR__ . '/uploads/';
+                $file_url = '/uploads/' . $file_name;
+                move_uploaded_file($_FILES['work_file']['tmp_name'], $file_path . $file_name);
+            };
+
             if (!$con) {
                     $error = mysqli_connect_error();
                 } else {
-                    $sql = "INSERT INTO studentsworkstable SET student_name=?, year_of_study=?, supervisor_name=?, work_name=?, user_id=? ON DUPLICATE KEY UPDATE student_name=?, year_of_study=?, supervisor_name=?, work_name=?;";
+                    $sql = "INSERT INTO studentsworkstable SET student_name=?, year_of_study=?, supervisor_name=?, work_name=?, user_id=?, work_file=? ON DUPLICATE KEY UPDATE student_name=?, year_of_study=?, supervisor_name=?, work_name=?, work_file=?;";
                     $stmt = mysqli_prepare($con, $sql);
-                    mysqli_stmt_bind_param($stmt, 'sissisiss', $student_name, $year_of_study, $supervisor_name, $work_name, $user_id, $student_name, $year_of_study, $supervisor_name, $work_name);
+                    mysqli_stmt_bind_param($stmt, 'sissississs', $student_name, $year_of_study, $supervisor_name, $work_name, $user_id, $file_url, $student_name, $year_of_study, $supervisor_name, $work_name, $file_url);
                     mysqli_stmt_execute($stmt);
                     $result = mysqli_stmt_get_result($stmt);
                     if (!$result) {
