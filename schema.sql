@@ -51,3 +51,11 @@ CREATE TABLE users (
   user_password CHAR(255),
   date_creation DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Создаем таблицу данных Администратора
+CREATE TABLE admins (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  admin_surname VARCHAR(128),
+  admin_name VARCHAR(128),
+  admin_password CHAR(255)
+);

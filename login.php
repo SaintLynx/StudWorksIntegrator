@@ -81,6 +81,7 @@ if (count($_POST) > 0) {
                 </div>
                 <button type="submit" class="button">Войти</button>
                 <a class="login-link" href="/sign-up.php">Создать аккаунт</a>
+                <a class="login-link" href="/login-manager.php">Для администратора</a>
             </form>
         </main>
     </body>

@@ -38,8 +38,8 @@ VALUES
     ('4');
 
 -- Добавляем в таблицу наименований студенческих работ данные из формы
-INSERT INTO studentsworkstable SET student_name=?, year_of_study=?, supervisor_name=?, work_name=?, user_id=? ON DUPLICATE KEY UPDATE student_name=?, year_of_study=?, supervisor_name=?, work_name=?;
--- Данные для подготовленного выражения: mysqli_stmt_bind_param($stmt, 'sissisiss', $student_name, $year_of_study, $supervisor_name, $work_name, $user_id, $student_name, $year_of_study, $supervisor_name, $work_name);
+INSERT INTO studentsworkstable SET student_name=?, year_of_study=?, supervisor_name=?, work_name=?, user_id=?, work_file=? ON DUPLICATE KEY UPDATE student_name=?, year_of_study=?, supervisor_name=?, work_name=?, work_file=?;
+-- Данные для подготовленного выражения: mysqli_stmt_bind_param($stmt, 'sissississs', $student_name, $year_of_study, $supervisor_name, $work_name, $user_id, $file_url, $student_name, $year_of_study, $supervisor_name, $work_name, $file_url);
 
 -- Формируем запрос в БД с указанием выбранного научного руководителя с сортировкой по курсу обучения
 SELECT student_name, year_of_study, supervisor_name, work_name FROM studentsworkstable WHERE supervisor_name='$supervisor_select' ORDER BY year_of_study, date_creation DESC;
@@ -58,3 +58,12 @@ SELECT id, user_surname, user_name, user_last_name, user_email, user_password FR
 
 -- Формируем запрос на получение списка email зарегистрированных
 SELECT user_email FROM users;
+
+-- Добавляем данные администратора
+INSERT INTO admins (admin_surname, admin_name, admin_password) VALUES ('admin', 'admin', '$2y$10$TjuX9jt8ASjfJQw.McrLauQo6qh88WppAps/Y5dvaSWrHTpJc8Z4e');
+
+-- Формируем запрос на получение данных администратора
+SELECT id, admin_surname, admin_name, admin_password FROM admins WHERE admin_name='$admin_login';
+
+-- Формируем запрос в БД на получение информации о работах, а также ссылки на скачивание файла
+SELECT student_name, year_of_study, supervisor_name, work_name, work_file, work_file FROM studentsworkstable WHERE supervisor_name='$supervisor_select' ORDER BY year_of_study;

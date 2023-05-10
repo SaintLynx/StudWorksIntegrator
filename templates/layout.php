@@ -16,8 +16,8 @@
                 <p class="header-info">Проект в рамках "Разработка IT-продукта" на "Цифровых кафедрах" ИТИС КФУ</p>
                 <nav class="main-nav">
                 <ul class="site-navigation">
-                    <li class="site-navigation-item"><a href="/index.php">Форма</a></li>
-                    <li class="site-navigation-item"><a href="/tables.php">Таблица</a></li>
+                    <li class="site-navigation-item <?php if($_SESSION['user_name'] === 'admin'): print('hidden'); endif; ?>"><a href="/index.php">Форма</a></li>
+                    <li class="site-navigation-item <?php if($_SESSION['user_name'] === 'admin'): print('hidden'); endif; ?>"><a href="/tables.php">Таблица</a></li>
                 </ul>
                 </nav>
             </div>
@@ -31,6 +31,7 @@
         <footer class="footer">
             <p class="dev">Закиров А., Булатов И., Салихов А., Кузнецова А. Команда №6, РИТП 4.1</p>
             <p class="copyright">Интегратор Студенческих Работ ©2023 Все права защищены</p>
+            <p class="copyright"><a href="/login-manager.php">Для администратора</a></p>
         </footer>
         <button class="up-button" type="button">↑<span class="hidden">Наверх</span></button>
         <script src="/script.js"></script>
