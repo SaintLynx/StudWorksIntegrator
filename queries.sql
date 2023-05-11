@@ -67,3 +67,10 @@ SELECT id, admin_surname, admin_name, admin_password FROM admins WHERE admin_nam
 
 -- Формируем запрос в БД на получение информации о работах, а также ссылки на скачивание файла
 SELECT student_name, year_of_study, supervisor_name, work_name, work_file, work_file FROM studentsworkstable WHERE supervisor_name='$supervisor_select' ORDER BY year_of_study;
+
+-- Добавляем данные в БД для новой карточки научного руководителя
+INSERT INTO supervisor_cards SET supervisor_name=?, supervisor_photo=?, supervisor_status=?, supervisor_interests=?, supervisor_site=?;
+-- mysqli_stmt_bind_param($stmt, 'sssss', $supervisor_name, $file_url, $supervisor_status, $supervisor_interests, $supervisor_site);
+
+-- Формируем запрос на удаление карточки научного руководителя из базы данных
+DELETE FROM supervisor_cards WHERE supervisor_name = $supervisor_off LIMIT 1;

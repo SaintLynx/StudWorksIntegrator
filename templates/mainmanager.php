@@ -1,13 +1,59 @@
+<section class="admin-cards">
+    <h2 class="form-title">Редактирование карточек научных руководителей</h2>
+    <form method="POST" action="/manager.php" enctype="multipart/form-data">
+        <div class="sign-up_item">
+            <p class="alert-sign-up"><?= $empty_supervisor_name; ?></p>
+            <label for="supervisor_name">ФИО научного руководителя: </label>
+            <input id="supervisor_name" type="text" name="supervisor_name" placeholder="Фамилия Имя Отчество" value="<?= $_POST["supervisor_name"] ?? ''; ?>">
+        </div>
+        <div class="sign-up_item">
+            <p class="alert-sign-up"><?= $empty_status; ?></p>
+            <label for="supervisor_status">Должность, ученая степень, ученое звание: </label>
+            <input id="supervisor_status" type="textarea" name="supervisor_status" placeholder="Должность, ученая степень, ученое звание" value="<?= $_POST["supervisor_status"] ?? ''; ?>">
+        </div>
+        <div class="sign-up_item">
+            <p class="alert-sign-up"><?= $empty_interests; ?></p>
+            <label for="supervisor_interests">Научные интересы: </label>
+            <input id="supervisor_interests" type="textarea" name="supervisor_interests" placeholder="Научные интересы научного руководителя" value="<?= $_POST["supervisor_interests"] ?? ''; ?>">
+        </div>
+        <div class="sign-up_item">
+            <p class="alert-sign-up"><?= $empty_site; ?></p>
+            <label for="supervisor_site">Ссылка на персональную страницу КФУ: </label>
+            <input id="supervisor_site" type="text" name="supervisor_site" placeholder="Введите URL" value="<?= $_POST["supervisor_site"] ?? ''; ?>">
+        </div>
+        <div class="sign-up_item">
+            <p class="alert-sign-up"><?= $empty_avatar; ?></p>
+            <label for="supervisor_photo">Аватар научного руководителя (формат квадрат): </label>
+            <input id="supervisor_photo" type="file" name="supervisor_photo">
+        </div>
+        <input class="button" type="submit" value="Отправить">
+    </form>
+</section>
+<section class="card-off">
+    <h2 class="form-title">Удаление карточки научного руководителя (действие не обратимо!)</h2>
+    <form method="POST" action="/manager.php" enctype="multipart/form-data">
+        <label class="supervisor-lable-select">Выберите карточку
+        <select class="supervisor-select-select" name="supervisor_name" required>
+                <option selected></option>
+            <?php foreach ($supervisors as $supervisor): ?>
+                <option><?= $supervisor["supervisor_name"]; ?></option>
+            <?php endforeach; ?>
+        </select>
+        </label>
+        <input class="button" type="submit" value="Удалить">
+    </form>
+</section>
 <section class="form-select">
-    <h2 class="form-title">Темы научных работ</h2>
+    <h2 class="form-title">Темы научных работ обучающихся</h2>
     <form method="GET" action="/manager.php" enctype="multipart/form-data">
-        <label class="supervisor-lable-select">Научный руководитель 
-            <select class="supervisor-select-select" name="supervisor_name" required>
-                    <option selected></option>
-                <?php foreach ($supervisors as $supervisor): ?>
-                    <option><?= $supervisor["supervisor_name"]; ?></option>
-                <?php endforeach; ?>
-            </select>
+        <label class="supervisor-lable-select">Научный руководитель  
+        <select class="supervisor-select-select" name="supervisor_name" required>
+                <option selected></option>
+            <?php foreach ($supervisors as $supervisor): ?>
+                <option><?= $supervisor["supervisor_name"]; ?></option>
+            <?php endforeach; ?>
+                <option>Все</option>
+        </select>
         </label>
         <input class="button" type="submit" value="Отправить">
     </form>

@@ -12,18 +12,18 @@ body {
 }
 
 .header {
-    width: 1150px;
+    width: 950px;
     margin: 50px auto 100px auto;
     padding: 0; 
     display: flex;
 }
 
 .header-container {
-    width: 1000px;
+    width: 850px;
 }
 
 .user-container {
-    width: 150px;
+    width: 100px;
     text-align: center;
     margin-top: 25px;
 }
@@ -258,7 +258,7 @@ h2 {
     opacity: 0.3;
 }
 
-/*Страница для преподавателей*/
+/*Страница с таблицей*/
 
 .table-section {
     width: 1150px;
@@ -325,6 +325,24 @@ h2 {
 
 .col6 {
     width: 160px;
+}
+
+/* Страница администратора */
+
+.admin-cards {
+    width: 950px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 75px;
+}
+
+.card-off {
+    width: 550px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 75px;
 }
 
 /*Footer*/

@@ -8,7 +8,7 @@ if (isset($_SESSION['user_surname'])) {
     if (!$con) {
             $error = mysqli_connect_error();
         } else {
-            $sql = "SELECT supervisor_name FROM supervisors_select";
+            $sql = "SELECT supervisor_name FROM supervisor_cards";
             $result = mysqli_query($con, $sql);
             if (!$result) {
             $error = mysqli_error($con);
@@ -35,7 +35,7 @@ if (isset($_SESSION['user_surname'])) {
             if (!$con) {
                 $error = mysqli_connect_error();
             } else {
-                $sql = "SELECT student_name, year_of_study, supervisor_name, work_name, work_file, date_creation FROM studentsworkstable WHERE supervisor_name='$supervisor_select' ORDER BY year_of_study, date_creation DESC;";
+                $sql = "SELECT student_name, year_of_study, supervisor_name, work_name, date_creation FROM studentsworkstable WHERE supervisor_name='$supervisor_select' ORDER BY year_of_study, date_creation DESC;";
                 $result = mysqli_query($con, $sql);
                 if (!$result) {
                 $error = mysqli_error($con);
