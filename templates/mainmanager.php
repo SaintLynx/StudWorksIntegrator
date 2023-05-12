@@ -1,6 +1,6 @@
 <section class="admin-cards">
     <h2 class="form-title">Редактирование карточек научных руководителей</h2>
-    <form method="POST" action="/manager.php" enctype="multipart/form-data">
+    <form method="POST" action="/manager.php" enctype="multipart/form-data" autocomplete="off">
         <div class="sign-up_item">
             <p class="alert-sign-up"><?= $empty_supervisor_name; ?></p>
             <label for="supervisor_name">ФИО научного руководителя: </label>
@@ -31,7 +31,7 @@
 </section>
 <section class="card-off">
     <h2 class="form-title">Удаление карточки научного руководителя (действие не обратимо!)</h2>
-    <form method="POST" action="/manager.php" enctype="multipart/form-data">
+    <form method="POST" action="/card-off.php" enctype="multipart/form-data">
         <label class="supervisor-lable-select">Выберите карточку
         <select class="supervisor-select-select" name="supervisor_name" required>
                 <option selected></option>

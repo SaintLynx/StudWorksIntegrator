@@ -73,4 +73,4 @@ INSERT INTO supervisor_cards SET supervisor_name=?, supervisor_photo=?, supervis
 -- mysqli_stmt_bind_param($stmt, 'sssss', $supervisor_name, $file_url, $supervisor_status, $supervisor_interests, $supervisor_site);
 
 -- Формируем запрос на удаление карточки научного руководителя из базы данных
-DELETE FROM supervisor_cards WHERE supervisor_name = $supervisor_off LIMIT 1;
+DELETE FROM supervisor_cards WHERE supervisor_name = '$supervisor';

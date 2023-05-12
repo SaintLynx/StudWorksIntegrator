@@ -43,7 +43,7 @@ if (isset($_SESSION['user_surname'])) {
         if($error_counter === 0) {
             $supervisor_name = $_POST['supervisor_name'];
             $supervisor_status = $_POST['supervisor_status'];
-            $supervisor_interests = $_POST['supervisor_interests'];
+            $supervisor_interests = 'Научные интересы: ' . $_POST['supervisor_interests'];
             $supervisor_site = $_POST['supervisor_site'];
 
             if (isset($_FILES['supervisor_photo'])) {
@@ -68,19 +68,6 @@ if (isset($_SESSION['user_surname'])) {
             header('Location: /success-card-change.php');
         };
     };
-
-
-    // $supervisor_off = $_POST['supervisor_name'];
-    // if (!$con) {
-    //     $error = mysqli_connect_error();
-    // } else {
-    //     $sql = "DELETE FROM supervisor_cards WHERE supervisor_name = $supervisor_off LIMIT 1;";
-    //     $result = mysqli_query($con, $sql);
-    //     if (!$result) {
-    //         $error = mysqli_error($con);
-    //     };
-    // };
-
 
     if (!$con) {
             $error = mysqli_connect_error();
