@@ -13,6 +13,8 @@ CREATE TABLE studentsworkstable (
   year_of_study INT,
   supervisor_name VARCHAR(128),
   work_name TEXT NOT NULL,
+  user_id INT UNIQUE,
+  work_file VARCHAR(128),
   date_creation DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -37,4 +39,23 @@ CREATE TABLE supervisor_cards (
   supervisor_status VARCHAR(128),
   supervisor_interests VARCHAR(255),
   supervisor_site VARCHAR(255)
+);
+
+-- Создаем БД пользователей
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_surname VARCHAR(128),
+  user_name VARCHAR(128),
+  user_last_name VARCHAR(128),
+  user_email VARCHAR(128) NOT NULL UNIQUE,
+  user_password CHAR(255),
+  date_creation DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Создаем таблицу данных Администратора
+CREATE TABLE admins (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  admin_surname VARCHAR(128),
+  admin_name VARCHAR(128),
+  admin_password CHAR(255)
 );

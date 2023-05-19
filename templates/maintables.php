@@ -7,6 +7,7 @@
                 <?php foreach ($supervisors as $supervisor): ?>
                     <option><?= $supervisor["supervisor_name"]; ?></option>
                 <?php endforeach; ?>
+                    <option>Все</option>
             </select>
         </label>
         <input class="button" type="submit" value="Отправить">
