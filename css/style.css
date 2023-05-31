@@ -345,6 +345,10 @@ h2 {
     margin-bottom: 75px;
 }
 
+.admin-form-title {
+    margin-top: 65px;
+}
+
 /*Footer*/
 
 .footer {
@@ -413,6 +417,10 @@ h2 {
 .hidden {
     display: none;
 }
+
+.href-visibility {
+    visibility: hidden;
+};
 
 .shown {
     display: inline-block;
