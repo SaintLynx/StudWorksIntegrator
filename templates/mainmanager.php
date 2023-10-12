@@ -33,7 +33,7 @@
                     <td class="col3"><?= htmlspecialchars($getrow["year_of_study"]); ?></td>
                     <td class="col4"><?= htmlspecialchars($getrow["supervisor_name"]); ?></td>
                     <td class="col5"><?= htmlspecialchars($getrow["work_name"]); ?></td>
-                    <td class="col6 <?php if($getrow["work_file"] === '/uploads/'): print('href-visibility'); endif; ?>"><a href="<?= $getrow["work_file"]; ?>">Скачать</a></td>
+                    <td class="col6 <?php if($getrow["work_file"] === '/uploads/'): print('tablecell'); endif; ?>"><a href="<?= $getrow["work_file"]; ?>">Скачать</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
