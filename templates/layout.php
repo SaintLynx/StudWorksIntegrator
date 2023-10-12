@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <!--http://127.0.0.1:3000/pages/index.html-->
         <meta charset="utf-8">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
